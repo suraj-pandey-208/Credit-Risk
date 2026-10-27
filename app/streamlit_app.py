@@ -6,9 +6,6 @@ import streamlit as st
 import plotly.express as px
 
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
 
 API_URL = os.getenv(
     "API_URL",
@@ -27,9 +24,6 @@ ART = os.path.join(
 )
 
 
-# ============================================================
-# PAGE CONFIG
-# ============================================================
 
 st.set_page_config(
     page_title="Credit Risk AI",
@@ -38,9 +32,7 @@ st.set_page_config(
 )
 
 
-# ============================================================
-# CUSTOM CSS
-# ============================================================
+
 
 st.markdown(
     """
@@ -109,19 +101,15 @@ st.markdown(
 st.markdown(
     """
     <div class="hero">
-
         <h1>💳 Credit Risk AI</h1>
-
         <p>
             AI-powered credit default prediction using
             XGBoost, SHAP, FastAPI and Streamlit
         </p>
-
     </div>
     """,
     unsafe_allow_html=True
 )
-
 
 # ============================================================
 # CONNECT TO FASTAPI
