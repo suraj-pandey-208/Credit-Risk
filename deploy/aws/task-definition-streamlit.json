@@ -1,0 +1,15 @@
+{
+  "family": "credit-risk-streamlit",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "containerDefinitions": [{
+    "name": "streamlit",
+    "image": "<ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/credit-risk-ai:latest",
+    "essential": true,
+    "command": ["streamlit", "run", "app/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501"],
+    "portMappings": [{"containerPort": 8501, "protocol": "tcp"}],
+    "environment": [{"name":"API_URL","value":"http://<API-ALB-DNS>:8000"}]
+  }]
+}

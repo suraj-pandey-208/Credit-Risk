@@ -1,0 +1,13 @@
+# Data Dictionary
+- `SeriousDlqin2yrs`: target; serious delinquency within two years.
+- `RevolvingUtilizationOfUnsecuredLines`: revolving utilization ratio.
+- `age`: borrower age.
+- `NumberOfTime30-59DaysPastDueNotWorse`: 30–59 day delinquency count.
+- `DebtRatio`: debt ratio.
+- `MonthlyIncome`: monthly income.
+- `NumberOfOpenCreditLinesAndLoans`: open credit lines and loans.
+- `NumberOfTimes90DaysLate`: 90+ day delinquency count.
+- `NumberRealEstateLoansOrLines`: real-estate loan/line count.
+- `NumberOfTime60-89DaysPastDueNotWorse`: 60–89 day delinquency count.
+- `NumberOfDependents`: dependents.
+- `Unnamed: 0`: source row identifier; excluded from modeling.

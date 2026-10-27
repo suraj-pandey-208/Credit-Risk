@@ -1,0 +1,47 @@
+{
+  "dataset": "cs-training.csv",
+  "rows": 150000,
+  "columns": [
+    "Unnamed: 0",
+    "SeriousDlqin2yrs",
+    "RevolvingUtilizationOfUnsecuredLines",
+    "age",
+    "NumberOfTime30-59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60-89DaysPastDueNotWorse",
+    "NumberOfDependents"
+  ],
+  "target": "SeriousDlqin2yrs",
+  "target_positive_rate": 0.06684,
+  "split": {
+    "train": 120000,
+    "validation": 24000,
+    "test": 30000,
+    "random_state": 42
+  },
+  "feature_count": 34,
+  "champion": "XGBoost Champion",
+  "threshold": 0.355,
+  "business_metrics": {
+    "threshold": 0.355,
+    "approval_rate": 0.9555333333333333,
+    "baseline_npa": 0.06683333333333333,
+    "approved_portfolio_npa": 0.04562896811553757,
+    "npa_reduction": 0.3172722975231286,
+    "target_npa_reduction": 0.3,
+    "target_approval_floor": 0.75,
+    "target_85_auc": 0.85,
+    "auc_target_met": true,
+    "npa_target_met": true
+  },
+  "notes": [
+    "No synthetic fallback data is used.",
+    "The ID column is excluded from modeling.",
+    "Threshold is selected on validation data, then reported on untouched test data.",
+    "SHAP explains model behavior; it is not a causal or regulatory adverse-action reason."
+  ]
+}

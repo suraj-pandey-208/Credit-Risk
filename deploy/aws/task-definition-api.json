@@ -1,0 +1,15 @@
+{
+  "family": "credit-risk-api",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "containerDefinitions": [{
+    "name": "api",
+    "image": "<ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/credit-risk-ai:latest",
+    "essential": true,
+    "command": ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"],
+    "portMappings": [{"containerPort": 8000, "protocol": "tcp"}],
+    "environment": [{"name":"DATABASE_URL","value":"<FROM-SECRETS-MANAGER>"}]
+  }]
+}

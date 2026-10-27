@@ -1,0 +1,12 @@
+{
+  "threshold": 0.355,
+  "approval_rate": 0.9555333333333333,
+  "baseline_npa": 0.06683333333333333,
+  "approved_portfolio_npa": 0.04562896811553757,
+  "npa_reduction": 0.3172722975231286,
+  "target_npa_reduction": 0.3,
+  "target_approval_floor": 0.75,
+  "target_85_auc": 0.85,
+  "auc_target_met": true,
+  "npa_target_met": true
+}
