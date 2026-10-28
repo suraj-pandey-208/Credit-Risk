@@ -1,4 +1,4 @@
-# Credit Risk AI — Full End-to-End Project
+# Loan-Default-Prediction — Full End-to-End Project
 
 **Required stack:** Python 3.11, scikit-learn, XGBoost, SHAP, FastAPI, Streamlit, PostgreSQL, Evidently, MLflow, Docker, AWS ECS, Jupyter Notebook.
 
